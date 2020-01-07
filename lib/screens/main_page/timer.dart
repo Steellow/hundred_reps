@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ioo_reps/state/progress_state.dart';
+import 'package:ioo_reps/util/date_time_helper.dart';
 import 'package:ioo_reps/util/styles.dart';
+import 'package:provider/provider.dart';
+import 'package:timer_builder/timer_builder.dart';
 
 class Timer extends StatefulWidget {
   @override
@@ -9,25 +13,24 @@ class Timer extends StatefulWidget {
 class _TimerState extends State<Timer> {
   @override
   Widget build(BuildContext context) {
+    final ProgressState progressState = Provider.of<ProgressState>(context);
     return Container(
-      height: 100,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: <Color>[
-            Colors.orange,
-            Colors.white.withOpacity(0.0),
-          ]
-        )
-      ),
-      child: Align(
-        alignment: Alignment.topCenter,
-        child: Container(
-          margin: EdgeInsets.only(top: 24),
-          child: Text("07:41:74", style: Styles.timerText,)
-        )
+      margin: EdgeInsets.only(top: 24),
+      child: TimerBuilder.periodic(
+        Duration(milliseconds: 10),
+        builder: (context) {
+          Duration difference;
+          if (progressState.progress <= 8) {
+            final DateTime now = DateTime.now();
+            difference = now.difference(progressState.startTime);
+          } else {
+            difference = progressState.finishTime.difference(progressState.startTime);
+          }
+          return Text(
+            printDuration(difference),
+            style: Styles.timerText,
+          );
+        },
       ),
     );
   }

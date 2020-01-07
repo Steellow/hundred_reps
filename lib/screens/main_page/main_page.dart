@@ -3,6 +3,8 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:ioo_reps/screens/main_page/card_swiper.dart';
 import 'package:ioo_reps/screens/main_page/done_button.dart';
 import 'package:ioo_reps/screens/main_page/timer.dart';
+import 'package:ioo_reps/state/progress_state.dart';
+import 'package:provider/provider.dart';
 
 class MainPage extends StatelessWidget {
   @override
@@ -13,21 +15,26 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Timer(),
-              Text(
-                "I don't know I guess this is a motivational quote",
-                style: TextStyle(
-                  fontStyle: FontStyle.italic,
+          child: ChangeNotifierProvider<ProgressState>.value(
+            value: ProgressState(),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Timer(),
+                Text(
+                  "I don't know I guess this is a motivational quote",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
                 ),
-              ),
-              Column(children: [
-                CardSwiper(sController: sController),
-                DoneButton(sController: sController),
-              ]),
-            ],
+                Column(
+                  children: [
+                    CardSwiper(sController: sController),
+                    DoneButton(sController: sController),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
