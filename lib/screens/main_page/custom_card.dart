@@ -17,7 +17,7 @@ class _CustomCardState extends State<CustomCard> {
   Widget build(BuildContext context) {
     final int reps = repsLeftByIndex(widget.index);
 
-    return ZoomableTiltView(
+    return ZoomableTiltView( // Using ZoomableTiltView for extra juiciness
       zoomLimit: 1,
       child: Container(
         height: 300,

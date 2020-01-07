@@ -17,7 +17,7 @@ class _TimerState extends State<Timer> {
     return Container(
       margin: EdgeInsets.only(top: 24),
       child: TimerBuilder.periodic(
-        Duration(milliseconds: 100),
+        Duration(milliseconds: 100), // ? What's good interval here?
         builder: (context) {
           Duration difference;
           if (progressState.progress <= 8) {

@@ -16,20 +16,6 @@ int repsLeftByIndex(int index) {
   }
 }
 
-// Color colorByIndex(int index) {
-//   if(index == 0) {
-//     return Colors.red;
-//   } else if (index < 3) {
-//     return Colors.orange;
-//   } else if(index < 5) {
-//     return Colors.yellow;
-//   } else if (index < 7) {
-//     return Colors.lightGreen;
-//   } else {
-//     return Colors.green;
-//   }
-// }
-
 Color colorByIndex(int index) {
   // Colors generated using ColorBlender
   switch (index) {
