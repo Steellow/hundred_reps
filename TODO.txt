@@ -1,0 +1,11 @@
+MAIN FEATURES:
+    Clicking "Done" button from last card goes to the first
+
+
+OPTINOAL FEATURES:
+
+
+BUGS:
+
+
+HI-FI:

@@ -23,6 +23,9 @@ class _CustomCardState extends State<CustomCard> {
         height: 300,
         margin: EdgeInsets.symmetric(vertical: 16), // Without this the Tilt clips on Container on which Swiper is in
         child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
