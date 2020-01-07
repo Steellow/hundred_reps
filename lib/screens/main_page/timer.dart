@@ -13,17 +13,17 @@ class Timer extends StatefulWidget {
 class _TimerState extends State<Timer> {
   @override
   Widget build(BuildContext context) {
-    final ProgressState progressState = Provider.of<ProgressState>(context);
+    final ProgressState progressState = Provider.of<ProgressState>(context); // Easier acces to ProgressState
     return Container(
       margin: EdgeInsets.only(top: 24),
       child: TimerBuilder.periodic(
-        Duration(milliseconds: 10),
+        Duration(milliseconds: 100),
         builder: (context) {
           Duration difference;
           if (progressState.progress <= 8) {
             final DateTime now = DateTime.now();
             difference = now.difference(progressState.startTime);
-          } else {
+          } else { // If user has finished it displays finish time, otherwise starttime compared to current time
             difference = progressState.finishTime.difference(progressState.startTime);
           }
           return Text(

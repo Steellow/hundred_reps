@@ -13,6 +13,7 @@ class ProgressState extends ChangeNotifier {
 
   void updateProgress() {
     _progress += 1;
+    notifyListeners();
   }
 
   void setFinishTime(DateTime dt) {

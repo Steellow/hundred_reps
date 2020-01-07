@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ioo_reps/util/reps_left_calc.dart';
+import 'package:ioo_reps/util/progress_helper.dart';
 import 'package:ioo_reps/util/styles.dart';
 import 'package:zoomable_tilt_view/zoomable_tilt_view.dart';
 
