@@ -3,7 +3,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:ioo_reps/screens/main_page/custom_card.dart';
 
 class CardSwiper extends StatefulWidget {
-  SwiperController sController;
+  final SwiperController sController;
 
   CardSwiper({Key key, this.sController}) : super(key: key);
 

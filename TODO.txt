@@ -1,5 +1,6 @@
 MAIN FEATURES:
     Clicking "Done" button from last card goes to the first
+    Status bar color
 
 
 OPTINOAL FEATURES:

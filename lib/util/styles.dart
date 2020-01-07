@@ -17,4 +17,10 @@ abstract class Styles {
   static var cardSecondaryText = TextStyle(
     letterSpacing: 5,
   );
+
+  static var timerText = TextStyle(
+    fontSize: 20,
+    letterSpacing: 5,
+    color: Colors.black87
+  );
 }
