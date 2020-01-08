@@ -24,7 +24,8 @@ class _DoneButtonState extends State<DoneButton> {
         height: 60,
         child: RaisedButton(
           onPressed: () {
-            progressState.updateProgress(); //* Updating progress before if() statement so .move() method (below) knows where to move
+            progressState
+                .updateProgress(); //* Updating progress before if() statement so .move() method (below) knows where to move
 
             if (progressState.progress < 9) {
               // Moves the card using SwiperController defined in main_page.dart
@@ -41,8 +42,9 @@ class _DoneButtonState extends State<DoneButton> {
           ),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
+            side: BorderSide(color: Colors.redAccent),
           ),
-          color: Colors.redAccent,
+          color: Colors.white,
         ),
       ),
     );

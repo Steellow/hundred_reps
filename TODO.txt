@@ -8,6 +8,8 @@ OPTINOAL FEATURES:
 
 
 BUGS:
+    Swiper hangs if been idling
 
 
 HI-FI:
+    Motivation widget

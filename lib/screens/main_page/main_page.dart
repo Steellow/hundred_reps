@@ -14,11 +14,12 @@ class MainPage extends StatelessWidget {
         SwiperController(); // Defining Controller for Swiper here because both CardSwiper() and DoneButton() widgets need it
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ChangeNotifierProvider<ProgressState>.value(
         value: ProgressState(),
         child: Stack(
           children: [
-            BackgroundGradient(),
+            // BackgroundGradient(),
             SafeArea(
               child: Center(
                 child: Column(
@@ -29,6 +30,7 @@ class MainPage extends StatelessWidget {
                       "I don't know I guess this is a motivational quote",
                       style: TextStyle(
                         fontStyle: FontStyle.italic,
+                        color: Colors.black87,
                       ),
                     ),
                     Column(
