@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ioo_reps/state/progress_state.dart';
 import 'package:ioo_reps/util/date_time_helper.dart';
 import 'package:ioo_reps/util/styles.dart';
@@ -28,7 +29,8 @@ class _TimerState extends State<Timer> {
           }
           return Text(
             printDuration(difference),
-            style: Styles.timerText,
+            // style: Styles.timerText,
+            style: GoogleFonts.shareTechMono(textStyle: Styles.timerText),
           );
         },
       ),

@@ -19,8 +19,8 @@ abstract class Styles {
   );
 
   static var timerText = TextStyle(
-    fontSize: 20,
+    fontSize: 30,
     letterSpacing: 5,
-    color: Colors.black87
+    color: Colors.black87,
   );
 }
