@@ -11,8 +11,7 @@ class ProgressBar extends StatefulWidget {
 class _ProgressBarState extends State<ProgressBar> {
   @override
   Widget build(BuildContext context) {
-    final ProgressState progressState =
-        Provider.of<ProgressState>(context); // Easier acces to ProgressState
+    final ProgressState progressState = Provider.of<ProgressState>(context); // Easier acces to ProgressState
     return LinearPercentIndicator(
       width: MediaQuery.of(context).size.width,
       percent: progressState.repsDone / 100,

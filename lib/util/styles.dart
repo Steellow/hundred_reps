@@ -13,7 +13,6 @@ abstract class Styles {
     // color: Colors.black,
     color: Colors.white,
     fontWeight: FontWeight.bold,
-    
   );
 
   static var cardSecondaryText = TextStyle(
@@ -27,4 +26,15 @@ abstract class Styles {
     letterSpacing: 5,
     color: Colors.black54,
   );
+
+  static var goodJobText = TextStyle(
+    fontSize: 50,
+    color: Colors.white,
+    fontWeight: FontWeight.bold,
+  );
+
+  static List<Color> bgColors = <Color>[
+    Colors.red[400],
+    Colors.redAccent[100],
+  ];
 }

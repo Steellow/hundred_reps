@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:ioo_reps/screens/results_page/results_page.dart';
 import 'package:ioo_reps/state/progress_state.dart';
 import 'package:ioo_reps/util/styles.dart';
 import 'package:provider/provider.dart';
@@ -24,16 +25,26 @@ class _DoneButtonState extends State<DoneButton> {
         height: 60,
         child: RaisedButton(
           onPressed: () {
-            progressState
-                .updateProgress(); //* Updating progress before if() statement so .move() method (below) knows where to move
+            progressState.updateProgress(); //* Updating progress before if() statement so .move() method (below) knows where to move
 
             if (progressState.progress < 9) {
               // Moves the card using SwiperController defined in main_page.dart
-              widget.sController.move(progressState
-                  .progress); //!Using .move instead of .next, because Swiper hangs if you click "Done" button when its animating
+              widget.sController.move(progressState.progress); //!Using .move instead of .next, because Swiper hangs if you click "Done" button when its animating
 
-            } else if (progressState.progress == 9) {
+            } else if (progressState.progress >= 9) {
+              // Saving the finish time
               progressState.setFinishTime(DateTime.now());
+
+              // Navigating to new screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ResultsPage(
+                    startTime: progressState.startTime,
+                    finishTime: progressState.finishTime,
+                  ),
+                ),
+              );
             }
           },
           child: Text(
