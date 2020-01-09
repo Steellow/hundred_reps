@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:ioo_reps/screens/results_page/results_page.dart';
+import 'package:ioo_reps/screens/shared_widgets/my_button_theme.dart';
 import 'package:ioo_reps/state/progress_state.dart';
 import 'package:ioo_reps/util/styles.dart';
 import 'package:provider/provider.dart';
@@ -20,9 +21,7 @@ class _DoneButtonState extends State<DoneButton> {
     final ProgressState progressState = Provider.of<ProgressState>(context);
     return Container(
       margin: EdgeInsets.all(40),
-      child: ButtonTheme(
-        minWidth: MediaQuery.of(context).size.width * 0.65,
-        height: 60,
+      child: MyButtonTheme(
         child: RaisedButton(
           onPressed: () {
             progressState.updateProgress(); //* Updating progress before if() statement so .move() method (below) knows where to move

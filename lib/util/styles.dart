@@ -33,6 +33,10 @@ abstract class Styles {
     fontWeight: FontWeight.bold,
   );
 
+  static var descriptionText = TextStyle(
+    color: Colors.grey[50],
+  );
+
   static List<Color> bgColors = <Color>[
     Colors.red[400],
     Colors.redAccent[100],

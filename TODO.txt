@@ -5,11 +5,28 @@ MAIN FEATURES:
 
 OPTINOAL FEATURES:
     Save results
+    Compare your time to the best time
+    Pause
+    Reset
 
 
 BUGS:
-    Swiper hangs if been idling
+    Swiper hangs if been idling (bcz of hot reload?)
 
 
 HI-FI:
     Motivation widget
+    Hero Transitions
+    List of pushup-variations
+    Picture of man doing pushups (wikimedia commons?)
+
+
+CLEAN-CODE:
+    Go through problems
+    Delete unecessary commented lines
+    screen files, organize better?
+
+
+"Challenge to do 100 pushups, which one of the best calisthenics excercises. You 
+will do the pushups in sets of 4-8-12-16-20-16-12-8-4. You can rest as long as you
+need."
