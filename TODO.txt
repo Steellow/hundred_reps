@@ -1,12 +1,15 @@
 MAIN FEATURES:
-    Clicking "Done" button from last card goes to the first
-    Status bar color
+    Start Page
+    See Results (end page)
 
 
 OPTINOAL FEATURES:
+    Save results
 
 
 BUGS:
+    Swiper hangs if been idling
 
 
 HI-FI:
+    Motivation widget

@@ -5,8 +5,15 @@ String printDuration(Duration duration) {
     return "0$n";
   }
 
+  String twoDigitsIfNotZero(int n) { //* Also returns ":"
+    if(n == 0) {
+      return "";
+    }
+    return twoDigits(n) + ":";
+  }
+
   String twoDigitMinutes = twoDigits(duration.inMinutes.remainder(60));
   String twoDigitSeconds = twoDigits(duration.inSeconds.remainder(60));
   String twoDigitMilliseconds = twoDigits(duration.inMilliseconds.remainder(60));
-  return "${twoDigits(duration.inHours)}:$twoDigitMinutes:$twoDigitSeconds:$twoDigitMilliseconds";
+  return "${twoDigitsIfNotZero(duration.inHours)}$twoDigitMinutes:$twoDigitSeconds:$twoDigitMilliseconds";
 }

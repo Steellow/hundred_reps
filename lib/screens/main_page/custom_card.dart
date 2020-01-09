@@ -16,28 +16,47 @@ class _CustomCardState extends State<CustomCard> {
   @override
   Widget build(BuildContext context) {
     final int reps = repsLeftByIndex(widget.index);
+    final double _borderRadius =
+        20; // Using custom BorderRadius in both Card and Container, because you can't but gradient to Card, and if you put it to the container it goes on top of round corners
 
-    return ZoomableTiltView( // Using ZoomableTiltView for extra juiciness
+    return ZoomableTiltView(
+      // Using ZoomableTiltView for extra juiciness
       zoomLimit: 1,
       child: Container(
         height: 300,
-        margin: EdgeInsets.symmetric(vertical: 16), // Without this the Tilt clips on Container on which Swiper is in
+        margin: EdgeInsets.symmetric(
+            vertical:
+                16), // Without this the Tilt clips on Container on which Swiper is in
         child: Card(
+          elevation: 8,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(_borderRadius),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                reps.toString(),
-                style: Styles.cardMainText,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(_borderRadius),
+              gradient: LinearGradient(
+                begin: Alignment.bottomLeft,
+                end: Alignment.topRight,
+                colors: <Color>[
+                  Colors.red[400],
+                  Colors.redAccent[100],
+                ],
               ),
-              Text(
-                "REPS",
-                style: Styles.cardSecondaryText,
-              ),
-            ],
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  reps.toString(),
+                  style: Styles.cardMainText,
+                ),
+                Text(
+                  "REPS",
+                  style: Styles.cardSecondaryText,
+                ),
+              ],
+            ),
           ),
         ),
       ),

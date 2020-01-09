@@ -16,7 +16,7 @@ class BackgroundGradient extends StatelessWidget {
           gradient: LinearGradient(
         colors: <Color>[
           colorByIndex(progressState.progress),
-          Colors.white.withOpacity(0.0),
+          Colors.white.withOpacity(0),
         ],
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
