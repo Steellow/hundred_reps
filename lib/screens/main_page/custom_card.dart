@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:ioo_reps/util/progress_helper.dart';
 import 'package:ioo_reps/util/styles.dart';
 import 'package:zoomable_tilt_view/zoomable_tilt_view.dart';

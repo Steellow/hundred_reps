@@ -22,7 +22,7 @@ class _CardSwiperState extends State<CardSwiper> {
         },
         itemCount: 9,
         loop: false,
-        scale: 0.9,
+        scale: 0.7,
         viewportFraction: 0.7,
         physics: NeverScrollableScrollPhysics(), // Prevents user form scrolling cards
         controller: widget.sController,
