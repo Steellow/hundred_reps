@@ -14,13 +14,7 @@ class ResultsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: Styles.bgColors,
-            begin: Alignment.bottomLeft,
-            end: Alignment.topRight,
-          )
-        ),
+        decoration: Styles.bgDecoration,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

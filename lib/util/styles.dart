@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 abstract class Styles {
   static const doneButtonText = TextStyle(
@@ -37,8 +38,43 @@ abstract class Styles {
     color: Colors.grey[50],
   );
 
+  static var titleText = GoogleFonts.oswald(
+    textStyle: TextStyle(
+      color: Colors.white,
+      fontSize: 72,
+      fontWeight: FontWeight.w500,
+      shadows: <Shadow>[
+        Shadow(
+          offset: Offset(2, 2),
+          blurRadius: 3.0,
+          color: Colors.black.withOpacity(0.15),
+        ),
+        Shadow(
+          offset: Offset(2, 2),
+          blurRadius: 8.0,
+          color: Colors.black.withOpacity(0.15),
+        ),
+      ],
+    ),
+  );
+
+  // Would use .copyWith but it doesn't work properly with GoogleFonts for some reason
+  static var titleTextLight = GoogleFonts.oswald(
+    textStyle: TextStyle(
+      fontWeight: FontWeight.w200,
+    ),
+  );
+
   static List<Color> bgColors = <Color>[
     Colors.red[400],
     Colors.redAccent[100],
   ];
+
+  static BoxDecoration bgDecoration = BoxDecoration(
+    gradient: LinearGradient(
+      colors: bgColors,
+      begin: Alignment.bottomLeft,
+      end: Alignment.topRight,
+    ),
+  );
 }

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:ioo_reps/screens/intro_page/intro_page.dart';
-import 'package:ioo_reps/screens/main_page/main_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.redAccent,
       ),
-      title: '100_REPS', // TODO
+      title: '100REPS',
       // home: MainPage(),
       home: IntroPage(),
     );
