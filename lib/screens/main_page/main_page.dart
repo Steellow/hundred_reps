@@ -5,13 +5,13 @@ import 'package:ioo_reps/screens/main_page/done_button.dart';
 import 'package:ioo_reps/screens/main_page/prorgess_bar.dart';
 import 'package:ioo_reps/screens/main_page/timer.dart';
 import 'package:ioo_reps/state/progress_state.dart';
+import 'package:ioo_reps/util/styles.dart';
 import 'package:provider/provider.dart';
 
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SwiperController sController =
-        SwiperController(); // Defining Controller for Swiper here because both CardSwiper() and DoneButton() widgets need it
+    SwiperController sController = SwiperController(); // Defining Controller for Swiper here because both CardSwiper() and DoneButton() widgets need it
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -22,12 +22,10 @@ class MainPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Column(
-                  children: [
-                    ProgressBar(),
-                    Timer(),
-                  ]
-                ),
+                Column(children: [
+                  ProgressBar(),
+                  Timer(),
+                ]),
                 Text(
                   "I don't know I guess this is a motivational quote",
                   style: TextStyle(
@@ -38,7 +36,29 @@ class MainPage extends StatelessWidget {
                 Column(
                   children: [
                     CardSwiper(sController: sController),
-                    DoneButton(sController: sController),
+                    // DoneButton(sController: sController),
+                    Container(
+                      margin: EdgeInsets.all(40),
+                      width: MediaQuery.of(context).size.width * 0.65,
+                      height: 60,
+                      child: FloatingActionButton.extended(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MainPage(),
+                            ),
+                          );
+                        },
+                        label: Container(
+                          child: Text(
+                            "START",
+                            style: Styles.doneButtonText,
+                          ),
+                        ),
+                        backgroundColor: Colors.white,
+                      ),
+                    ),
                   ],
                 ),
               ],

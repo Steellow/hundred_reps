@@ -29,8 +29,30 @@ class IntroPage extends StatelessWidget {
                   minFontSize: 18,
                 ),
               ),
-              MyButtonTheme(
-                child: RaisedButton(
+              // MyButtonTheme(
+              //   child: RaisedButton(
+              //     onPressed: () {
+              //       Navigator.push(
+              //         context,
+              //         MaterialPageRoute(
+              //           builder: (context) => MainPage(),
+              //         ),
+              //       );
+              //     },
+              //     child: Text(
+              //       "START",
+              //       style: Styles.doneButtonText,
+              //     ),
+              //     shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(30),
+              //     ),
+              //     color: Colors.white,
+              //   ),
+              // ),
+              Container(
+                width: MediaQuery.of(context).size.width * 0.65,
+                height: 60,
+                child: FloatingActionButton.extended(
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -39,20 +61,41 @@ class IntroPage extends StatelessWidget {
                       ),
                     );
                   },
-                  child: Text(
-                    "START",
-                    style: Styles.doneButtonText,
+                  label: Container(
+                    child: Text(
+                      "START",
+                      style: Styles.doneButtonText,
+                    ),
                   ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  color: Colors.white,
+                  backgroundColor: Colors.white,
                 ),
-              )
+              ),
             ],
           ),
         ),
       ),
+      // floatingActionButton: Container(
+      //   width: MediaQuery.of(context).size.width * 0.65,
+      //   height: 60,
+      //   child: FloatingActionButton.extended(
+      //     onPressed: () {
+      //       Navigator.push(
+      //         context,
+      //         MaterialPageRoute(
+      //           builder: (context) => MainPage(),
+      //         ),
+      //       );
+      //     },
+      //     label: Container(
+      //       child: Text(
+      //         "START",
+      //         style: Styles.doneButtonText,
+      //       ),
+      //     ),
+      //     backgroundColor: Colors.white,
+      //   ),
+      // ),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

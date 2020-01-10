@@ -22,6 +22,7 @@ HI-FI:
     Hero Transitions
     List of pushup-variations
     Start page description, bold important parts
+    Button to Floating Action Button
 
 
 CLEAN-CODE:
