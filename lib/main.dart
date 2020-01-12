@@ -8,6 +8,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    
+
     // Blocks the app from running in landscape mode
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,

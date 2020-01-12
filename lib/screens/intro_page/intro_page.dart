@@ -1,13 +1,16 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:ioo_reps/screens/countdown_page/countdown_page.dart';
 import 'package:ioo_reps/screens/intro_page/title_text.dart';
 import 'package:ioo_reps/screens/main_page/main_page.dart';
 import 'package:ioo_reps/screens/shared_widgets/wide_floating_button.dart';
+import 'package:ioo_reps/util/fade_route.dart';
 import 'package:ioo_reps/util/styles.dart';
 
 class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       body: Container(
         decoration: Styles.bgDecoration,
@@ -35,7 +38,7 @@ class IntroPage extends StatelessWidget {
               ),
               WideFloatingButton(
                 onPressed: () {
-                  Navigator.push(context, FadeRoute(page: MainPage()));
+                  Navigator.push(context, FadeRoute(page: CountdownPage()));
                 },
                 text: "START",
                 borderSide: BorderSide(color: Colors.white),
@@ -46,27 +49,4 @@ class IntroPage extends StatelessWidget {
       ),
     );
   }
-}
-
-class FadeRoute extends PageRouteBuilder {
-  final Widget page;
-  FadeRoute({this.page})
-      : super(
-          pageBuilder: (
-            BuildContext context,
-            Animation<double> animation,
-            Animation<double> secondaryAnimation,
-          ) =>
-              page,
-          transitionsBuilder: (
-            BuildContext context,
-            Animation<double> animation,
-            Animation<double> secondaryAnimation,
-            Widget child,
-          ) =>
-              FadeTransition(
-            opacity: animation,
-            child: child,
-          ),
-        );
 }

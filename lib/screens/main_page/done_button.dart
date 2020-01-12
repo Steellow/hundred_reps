@@ -3,6 +3,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:ioo_reps/screens/results_page/results_page.dart';
 import 'package:ioo_reps/screens/shared_widgets/wide_floating_button.dart';
 import 'package:ioo_reps/state/progress_state.dart';
+import 'package:ioo_reps/util/fade_route.dart';
 import 'package:provider/provider.dart';
 
 class DoneButton extends StatefulWidget {
@@ -31,7 +32,7 @@ class _DoneButtonState extends State<DoneButton> {
             // Saving the finish time
             progressState.setFinishTime(DateTime.now());
             // Navigating to new screen
-            Navigator.push(
+            Navigator.pushReplacement(
               context,
               FadeRoute(
                 page: ResultsPage(
@@ -49,25 +50,3 @@ class _DoneButtonState extends State<DoneButton> {
   }
 }
 
-class FadeRoute extends PageRouteBuilder {
-  final Widget page;
-  FadeRoute({this.page})
-      : super(
-          pageBuilder: (
-            BuildContext context,
-            Animation<double> animation,
-            Animation<double> secondaryAnimation,
-          ) =>
-              page,
-          transitionsBuilder: (
-            BuildContext context,
-            Animation<double> animation,
-            Animation<double> secondaryAnimation,
-            Widget child,
-          ) =>
-              FadeTransition(
-            opacity: animation,
-            child: child,
-          ),
-        );
-}

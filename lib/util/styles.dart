@@ -34,6 +34,7 @@ abstract class Styles {
     fontSize: 50,
     color: Colors.white,
     fontWeight: FontWeight.bold,
+    shadows: textShadows,
   );
 
   static var descriptionText = TextStyle(

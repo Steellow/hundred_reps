@@ -9,7 +9,7 @@ OPTINOAL FEATURES:
     Compare your time to the best time
     Pause
     Reset
-    5 second countdown when you click Start
+    5 second countdown when you click Start (seperate splash screen?)
 
 
 
@@ -20,11 +20,11 @@ BUGS:
 
 HI-FI:
     Motivation widget
-    Hero Transitions
     List of pushup-variations
     Start page description, bold important parts
     Button to Floating Action Button
     Status bar color?
+    "Press back again to exit" on results page
 
 
 
