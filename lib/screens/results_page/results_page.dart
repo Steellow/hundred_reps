@@ -22,10 +22,13 @@ class ResultsPage extends StatelessWidget {
               Column(
                 children: <Widget>[
                   Text("Your time", style: Styles.cardSecondaryText,),
-                  Text(
-                    printDuration(finishTime.difference(startTime)), // Calculates duration from start and finish times and returns string
-                    style: GoogleFonts.shareTechMono(
-                      textStyle: Styles.timerText.copyWith(color: Colors.white),
+                  Hero(
+                    tag: 'timertext',
+                    child: Text(
+                      printDuration(finishTime.difference(startTime)), // Calculates duration from start and finish times and returns string
+                      style: GoogleFonts.shareTechMono(
+                        textStyle: Styles.timerText.copyWith(color: Colors.white),
+                      ),
                     ),
                   ),
                 ],

@@ -28,9 +28,12 @@ class _TimerState extends State<Timer> {
             // If user has finished it displays finish time, otherwise starttime compared to current time
             difference = progressState.finishTime.difference(progressState.startTime);
           }
-          return Text(
-            printDuration(difference),
-            style: GoogleFonts.shareTechMono(textStyle: Styles.timerText),
+          return Hero(
+            tag: 'timertext',
+            child: Text(
+              printDuration(difference),
+              style: GoogleFonts.shareTechMono(textStyle: Styles.timerText),
+            ),
           );
         },
       ),

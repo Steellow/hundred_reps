@@ -26,6 +26,8 @@ abstract class Styles {
     fontSize: 36,
     letterSpacing: 5,
     color: Colors.black54,
+    decoration: TextDecoration.none,
+    fontWeight: FontWeight.normal,
   );
 
   static var goodJobText = TextStyle(

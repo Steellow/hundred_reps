@@ -11,6 +11,7 @@ OPTINOAL FEATURES:
     Compare your time to the best time
     Pause
     Reset
+    5 second countdown when you click Start
 
 
 BUGS:
@@ -29,3 +30,4 @@ CLEAN-CODE:
     Go through problems
     Delete unecessary commented lines
     screen files, organize better?
+    Fade screen change in 2 places

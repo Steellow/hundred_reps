@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.redAccent,
       ),
       title: '100REPS',
-      // home: MainPage(),
       home: IntroPage(),
     );
   }
