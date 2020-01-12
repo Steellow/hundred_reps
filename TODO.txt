@@ -1,16 +1,14 @@
 MAIN FEATURES:
-    See Results (end page)
     Mention image source
     
 
 
 OPTINOAL FEATURES:
     Save results
-    Compare your time to the best time
+    Compare your time to your best time
     Pause
     Reset
-    5 second countdown when you click Start (seperate splash screen?)
-
+    
 
 
 BUGS:
@@ -25,6 +23,7 @@ HI-FI:
     Button to Floating Action Button
     Status bar color?
     "Press back again to exit" on results page
+    Improvement graph
 
 
 
@@ -32,5 +31,3 @@ CLEAN-CODE:
     Go through problems
     Delete unecessary commented lines
     screen files, organize better?
-    Fade screen change in 2 places
-    Delete unecessary files

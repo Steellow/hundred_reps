@@ -19,6 +19,7 @@ class _WideFloatingButtonState extends State<WideFloatingButton> {
       width: MediaQuery.of(context).size.width * 0.65,
       height: 60,
       child: FloatingActionButton.extended(
+        // Using FAB.extended instead of ButtonTheme to get those sweet animations between screens. Normally on 1 hero is allowed, but FAB has its unique Hero tag
         onPressed: widget.onPressed,
         label: Container(
           child: Text(

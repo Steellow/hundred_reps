@@ -24,10 +24,10 @@ class _DoneButtonState extends State<DoneButton> {
       margin: EdgeInsets.all(40),
       child: WideFloatingButton(
         onPressed: () {
-          progressState.updateProgress(); //* Updating progress before if() statement so .move() method (below) knows where to move
+          progressState.updateProgress(); //* Updating 'progress' before if() statement so .move() method (below) knows where to move
           if (progressState.progress < 9) {
             // Moves the card using SwiperController defined in main_page.dart
-            widget.sController.move(progressState.progress); //!Using .move instead of .next, because Swiper hangs if you click "Done" button when its animating
+            widget.sController.move(progressState.progress); //!Using .move instead of .next, because Swiper hangs if you click "Done" button when its animating with .next method (when user is spamming it)
           } else if (progressState.progress >= 9) {
             // Saving the finish time
             progressState.setFinishTime(DateTime.now());

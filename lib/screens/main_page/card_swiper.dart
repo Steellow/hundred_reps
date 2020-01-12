@@ -22,7 +22,7 @@ class _CardSwiperState extends State<CardSwiper> {
         },
         itemCount: 9,
         loop: false,
-        scale: 0.7,
+        scale: 0.7, // Using small scale to get breathing room around cards for the Tilt effect
         viewportFraction: 0.7,
         physics: NeverScrollableScrollPhysics(), // Prevents user form scrolling cards
         controller: widget.sController,

@@ -15,10 +15,11 @@ class _TimerState extends State<Timer> {
   @override
   Widget build(BuildContext context) {
     final ProgressState progressState = Provider.of<ProgressState>(context); // Easier acces to ProgressState
+
     return Container(
       margin: EdgeInsets.only(top: 6),
       child: TimerBuilder.periodic(
-        Duration(milliseconds: 100), // ? What's good interval here?
+        Duration(milliseconds: 50), // ? What's good interval here?
         builder: (context) {
           Duration difference;
           if (progressState.progress <= 8) {

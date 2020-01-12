@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 int repsLeftByIndex(int index) {
   if (index == 0 || index == 8) {
     return 4;
@@ -15,40 +13,3 @@ int repsLeftByIndex(int index) {
     return 0; // FOR DEBUG PURPOSES
   }
 }
-
-Color colorByIndex(int index) {
-  // Colors generated using ColorBlender
-  switch (index) {
-    case 0:
-      return Colors.red;
-      break;
-    case 1:
-      return Color(0xffF76D37);
-      break;
-    case 2:
-      return Color(0xffFA9739);
-      break;
-    case 3:
-      return Color(0xffFCC13A);
-      break;
-    case 4:
-      return Color(0xffFFEB3B);
-      break;
-    case 5:
-      return Color(0xffDBDF3F);
-      break;
-    case 6:
-      return Color(0xffB7D343);
-      break;
-    case 7:
-      return Color(0xff94C748);
-      break;
-    case 8:
-      return Color(0xff70BB4C);
-      break;
-    default:
-      return Colors.green;
-      break;
-  }
-}
-
