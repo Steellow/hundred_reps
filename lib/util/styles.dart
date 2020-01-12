@@ -26,7 +26,7 @@ abstract class Styles {
     fontSize: 36,
     letterSpacing: 5,
     color: Colors.black54,
-    decoration: TextDecoration.none,
+    decoration: TextDecoration.none, // Specifying decoration and fontWeight because this TStyle is used in Hero Widgets. Widget can't get instance of Theme during the Hero animation and tries to display default decoration (2 ugly yellow lines) unless specified here. (Same applies for fontWeight)
     fontWeight: FontWeight.normal,
   );
 
