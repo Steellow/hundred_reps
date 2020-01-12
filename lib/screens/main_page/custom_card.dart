@@ -20,6 +20,7 @@ class _CustomCardState extends State<CustomCard> {
 
     return ZoomableTiltView(
       // Using ZoomableTiltView for extra juiciness
+      tiltSensitivity: 0.2,
       zoomLimit: 1,
       child: Container(
         height: 300,

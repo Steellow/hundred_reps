@@ -1,6 +1,5 @@
 MAIN FEATURES:
     See Results (end page)
-    Disable screen rotate
     Mention image source
     
 
@@ -25,6 +24,7 @@ HI-FI:
     List of pushup-variations
     Start page description, bold important parts
     Button to Floating Action Button
+    Status bar color?
 
 
 

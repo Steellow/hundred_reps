@@ -38,6 +38,8 @@ abstract class Styles {
 
   static var descriptionText = TextStyle(
     color: Colors.grey[50],
+    shadows: textShadows,
+    height: 1.25,
   );
 
   static var titleText = GoogleFonts.oswald(
@@ -45,18 +47,7 @@ abstract class Styles {
       color: Colors.white,
       fontSize: 72,
       fontWeight: FontWeight.w500,
-      shadows: <Shadow>[
-        Shadow(
-          offset: Offset(2, 2),
-          blurRadius: 3.0,
-          color: Colors.black.withOpacity(0.15),
-        ),
-        Shadow(
-          offset: Offset(2, 2),
-          blurRadius: 8.0,
-          color: Colors.black.withOpacity(0.15),
-        ),
-      ],
+      shadows: textShadows,
     ),
   );
 
@@ -79,4 +70,17 @@ abstract class Styles {
       end: Alignment.topRight,
     ),
   );
+
+  static List<Shadow> textShadows = [
+    Shadow(
+      offset: Offset(2, 2),
+      blurRadius: 3.0,
+      color: Colors.black.withOpacity(0.15),
+    ),
+    Shadow(
+      offset: Offset(2, 2),
+      blurRadius: 8.0,
+      color: Colors.black.withOpacity(0.15),
+    ),
+  ];
 }

@@ -27,7 +27,7 @@ class IntroPage extends StatelessWidget {
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 32),
                 child: AutoSizeText(
-                  "Challenge to do 100 pushups, one of the best calisthenics excercises. You will do the pushups in sets of 4-8-12-16-20-16-12-8-4. You can rest as long as you need.",
+                  "Challenge: do 100 pushups – one of the best calisthenics exercises! Do the reps in sets of 4–8–12–16–20–16–12–8–4. Rest between the sets as long as needed.",
                   textAlign: TextAlign.center,
                   style: Styles.descriptionText,
                   minFontSize: 22,
