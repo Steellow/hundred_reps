@@ -1,4 +1,4 @@
-package com.example.ioo_reps
+package com.hanki.hundred_reps
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
