@@ -11,7 +11,8 @@ import 'package:provider/provider.dart';
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.red[100]));
+    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.red[100]));
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.black));
 
     SwiperController sController = SwiperController(); // Defining Controller for Swiper here because both CardSwiper() and DoneButton() widgets need it
 
