@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:ioo_reps/screens/main_page/card_swiper.dart';
 import 'package:ioo_reps/screens/main_page/done_button.dart';
+import 'package:ioo_reps/screens/main_page/motivation_text.dart';
 import 'package:ioo_reps/screens/main_page/prorgess_bar.dart';
 import 'package:ioo_reps/screens/main_page/timer.dart';
 import 'package:ioo_reps/state/progress_state.dart';
@@ -19,7 +20,6 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       body: ChangeNotifierProvider<ProgressState>.value(
         value: ProgressState(),
-        // TODO: Status bar color
         child: SafeArea(
           child: Center(
             child: Column(
@@ -29,13 +29,7 @@ class MainPage extends StatelessWidget {
                   ProgressBar(),
                   Timer(),
                 ]),
-                Text(
-                  "I don't know I guess this is a motivational quote",
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: Colors.black87,
-                  ),
-                ),
+                MotivationText(),
                 Column(
                   children: [
                     CardSwiper(sController: sController),

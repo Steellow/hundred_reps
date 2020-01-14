@@ -1,7 +1,6 @@
 MAIN FEATURES:
     Mention image source (in about page)
     About page
-    Play Store icon?
     
 
 
@@ -28,6 +27,7 @@ HI-FI:
     "Press back again to exit" on results page
     Improvement graph
     flutter_icons: adaptive_icon_background
+    Themes
 
 
 
