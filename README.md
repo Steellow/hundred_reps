@@ -1,16 +1,13 @@
-# ioo_reps
+# 100 reps
 
-A new Flutter project.
+Simple app made for the 100 pushups challenge. Pushups are made in sets of 4–8–12–16–20–16–12–8–4.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+![Intro page](screenshots/intro_page.png)
+![Main page](screenshots/main_page.png)
+![Results page](screenshots/results_page.png)
 
-A few resources to get you started if this is your first Flutter project:
+## Release
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Play store release coming soon
