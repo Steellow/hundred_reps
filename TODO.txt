@@ -1,12 +1,11 @@
 MAIN FEATURES:
     Mention image source (in about page)
     About page
+    Settings screen
     
 
 
 OPTINOAL FEATURES:
-    Save results
-    Compare your time to your best time
     Pause
     Reset
     Disable milliseconds from live timer (performance)
@@ -19,19 +18,15 @@ BUGS:
 
 
 HI-FI:
-    Motivation widget
     List of pushup-variations
     Start page description, bold important parts
-    Button to Floating Action Button
-    Status bar color?
     "Press back again to exit" on results page
     Improvement graph
     flutter_icons: adaptive_icon_background
     Themes
+    Notification when playing
 
 
 
 CLEAN-CODE:
-    Go through problems
-    Delete unecessary commented lines
     screen files, organize better?
