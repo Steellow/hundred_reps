@@ -23,7 +23,6 @@ class _CustomCardState extends State<CustomCard> {
       tiltSensitivity: 0.2,
       zoomLimit: 1,
       child: Container(
-        height: 300,
         margin: EdgeInsets.symmetric(vertical: 16), // Without this the Tilt clips on Container on which Swiper is in
         child: Card(
           elevation: 8,

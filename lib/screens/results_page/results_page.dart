@@ -18,16 +18,11 @@ class ResultsPage extends StatelessWidget {
     final Duration currentTime = finishTime.difference(startTime); // Calculates duration from start and finish times
     String bottomText = "Good job!";
 
-    print("bestTime: " + bestTime.toString());
-    print("bestTimeMillis: " + bestTime.inMilliseconds.toString());
-    print("currentTimeMillis: " + currentTime.inMilliseconds.toString());
-
     if ((bestTime == null) || (currentTime.inMilliseconds < bestTime.inMilliseconds)) {
-      print("ENTERED IF");
       bottomText = "New record!";
-      showTrophy = true;
+      showTrophy = true; // Used in _drawMiddleWidget() to show the trophy emoji
       saveBestTime(currentTime);
-      print("New record! saved to SharedPreferences");
+      print("New record saved to SharedPreferences");
     } else {
       showTrophy = false;
     }
@@ -72,6 +67,7 @@ class ResultsPage extends StatelessWidget {
     );
   }
 
+  // Displays trophy emoji if you make new record, otherwise displays your record time
   Widget _drawMiddleWidget() {
     print("_drawMiddleWidget: showTrophy: " + showTrophy.toString());
     if (showTrophy == true) {
@@ -92,7 +88,7 @@ class ResultsPage extends StatelessWidget {
           ),
         ),
         Text(
-          printDuration(bestTime), // Displays your current time as best time if bestTime is null
+          printDuration(bestTime),
           style: GoogleFonts.shareTechMono(
             textStyle: Styles.timerText.copyWith(
               color: Colors.white,

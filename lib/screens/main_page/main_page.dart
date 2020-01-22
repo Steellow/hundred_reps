@@ -25,17 +25,15 @@ class MainPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Column(children: [
-                  ProgressBar(),
-                  Timer(),
-                ]),
-                MotivationText(),
                 Column(
                   children: [
-                    CardSwiper(sController: sController),
-                    DoneButton(sController: sController),
+                    ProgressBar(),
+                    Timer(),
+                    MotivationText(),
                   ],
                 ),
+                CardSwiper(sController: sController),
+                DoneButton(sController: sController),
               ],
             ),
           ),
