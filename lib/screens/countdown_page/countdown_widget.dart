@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ioo_reps/screens/main_page/main_page.dart';
-import 'package:ioo_reps/util/fade_route.dart';
+import 'package:hundred_reps/screens/main_page/main_page.dart';
+import 'package:hundred_reps/util/fade_route.dart';
 import 'dart:async';
 
-import 'package:ioo_reps/util/styles.dart';
+import 'package:hundred_reps/util/styles.dart';
 
 class CountdownWidget extends StatefulWidget {
   @override

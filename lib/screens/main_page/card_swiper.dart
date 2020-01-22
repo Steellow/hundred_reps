@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:ioo_reps/screens/main_page/custom_card.dart';
+import 'package:hundred_reps/screens/main_page/custom_card.dart';
 
 class CardSwiper extends StatefulWidget {
   final SwiperController sController;

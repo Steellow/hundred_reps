@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ioo_reps/util/styles.dart';
+import 'package:hundred_reps/util/styles.dart';
 
 class WideFloatingButton extends StatefulWidget {
   final Function onPressed;

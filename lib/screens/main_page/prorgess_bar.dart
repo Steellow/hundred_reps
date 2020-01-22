@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ioo_reps/state/progress_state.dart';
+import 'package:hundred_reps/state/progress_state.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 

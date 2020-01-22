@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:ioo_reps/util/progress_helper.dart';
+import 'package:hundred_reps/util/progress_helper.dart';
 
 class ProgressState extends ChangeNotifier {
   int _progress = 0;

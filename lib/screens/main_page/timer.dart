@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ioo_reps/state/progress_state.dart';
-import 'package:ioo_reps/util/date_time_helper.dart';
-import 'package:ioo_reps/util/styles.dart';
+import 'package:hundred_reps/state/progress_state.dart';
+import 'package:hundred_reps/util/date_time_helper.dart';
+import 'package:hundred_reps/util/styles.dart';
 import 'package:provider/provider.dart';
 import 'package:timer_builder/timer_builder.dart';
 
