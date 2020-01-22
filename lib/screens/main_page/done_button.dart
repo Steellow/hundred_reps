@@ -4,6 +4,7 @@ import 'package:ioo_reps/screens/results_page/results_page.dart';
 import 'package:ioo_reps/screens/shared_widgets/wide_floating_button.dart';
 import 'package:ioo_reps/state/progress_state.dart';
 import 'package:ioo_reps/util/fade_route.dart';
+import 'package:ioo_reps/util/shared_prefs.dart';
 import 'package:provider/provider.dart';
 
 class DoneButton extends StatefulWidget {
@@ -20,7 +21,10 @@ class _DoneButtonState extends State<DoneButton> {
   Widget build(BuildContext context) {
     final ProgressState progressState = Provider.of<ProgressState>(context);
 
-    return Container(
+    return FutureBuilder(
+      future: getBestTime(), // Preloading value from SharedPreferences so we can immediately acces it when navigating to new screen below
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        return Container(
       margin: EdgeInsets.all(40),
       child: WideFloatingButton(
         onPressed: () {
@@ -31,13 +35,15 @@ class _DoneButtonState extends State<DoneButton> {
           } else if (progressState.progress >= 9) {
             // Saving the finish time
             progressState.setFinishTime(DateTime.now());
-            // Navigating to new screen
+            
             Navigator.pushReplacement(
               context,
               FadeRoute(
                 page: ResultsPage(
                   startTime: progressState.startTime,
                   finishTime: progressState.finishTime,
+                  // bestTime: Duration(minutes: 0, seconds: 42, milliseconds: 56), // DEBUG
+                  bestTime: snapshot.data,
                 ),
               ),
             );
@@ -47,6 +53,7 @@ class _DoneButtonState extends State<DoneButton> {
         borderSide: BorderSide(color: Colors.redAccent),
       ),
     );
+      },
+    );
   }
 }
-
