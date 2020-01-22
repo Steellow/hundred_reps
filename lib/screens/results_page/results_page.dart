@@ -9,6 +9,7 @@ class ResultsPage extends StatelessWidget {
   final DateTime startTime;
   final DateTime finishTime;
   final Duration bestTime;
+  static bool showTrophy;
 
   ResultsPage({Key key, this.startTime, this.finishTime, this.bestTime}) : super(key: key);
 
@@ -17,16 +18,19 @@ class ResultsPage extends StatelessWidget {
     final Duration currentTime = finishTime.difference(startTime); // Calculates duration from start and finish times
     String bottomText = "Good job!";
 
-    if ((bestTime != null) && (currentTime.inMilliseconds < bestTime.inMilliseconds)) {
-      bottomText = "New record!";
-      saveBestTime(currentTime);
-      print("New record! saved to SharedPreferences");
-    } else if (bestTime == null) {
-      saveBestTime(currentTime);
-      print("New record! saved to SharedPreferences");
-    }
+    print("bestTime: " + bestTime.toString());
+    print("bestTimeMillis: " + bestTime.inMilliseconds.toString());
+    print("currentTimeMillis: " + currentTime.inMilliseconds.toString());
 
-    //! KESKEN JÄI ei toimi jos bestTime on null
+    if ((bestTime == null) || (currentTime.inMilliseconds < bestTime.inMilliseconds)) {
+      print("ENTERED IF");
+      bottomText = "New record!";
+      showTrophy = true;
+      saveBestTime(currentTime);
+      print("New record! saved to SharedPreferences");
+    } else {
+      showTrophy = false;
+    }
 
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.black26)); // status bar color
 
@@ -39,34 +43,64 @@ class ResultsPage extends StatelessWidget {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  Text("Your time", style: Styles.cardSecondaryText),
+                  Text(
+                    "Your time",
+                    style: Styles.cardSecondaryText.copyWith(
+                      shadows: Styles.textShadows,
+                    ),
+                  ),
                   Hero(
                     tag: 'timertext',
                     child: Text(
                       printDuration(currentTime), // Returns String with enough zeros
                       style: GoogleFonts.shareTechMono(
-                        textStyle: Styles.timerText.copyWith(color: Colors.white),
+                        textStyle: Styles.timerText.copyWith(
+                          color: Colors.white,
+                          shadows: Styles.textShadows,
+                        ),
                       ),
                     ),
                   ),
                 ],
               ),
-              Column(
-                children: <Widget>[
-                  Text("Your record", style: Styles.cardSecondaryText),
-                  Text(
-                    bestTime != null ? printDuration(bestTime) : printDuration(currentTime), // Displays your current time as best time if bestTime is null
-                    style: GoogleFonts.shareTechMono(
-                      textStyle: Styles.timerText.copyWith(color: Colors.white),
-                    ),
-                  ),
-                ],
-              ),
+              _drawMiddleWidget(),
               Text(bottomText, style: Styles.goodJobText),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget _drawMiddleWidget() {
+    print("_drawMiddleWidget: showTrophy: " + showTrophy.toString());
+    if (showTrophy == true) {
+      return Text(
+        "🏆",
+        style: TextStyle(
+          fontSize: 100,
+          shadows: Styles.textShadows,
+        ),
+      );
+    }
+    return Column(
+      children: <Widget>[
+        Text(
+          "Your record",
+          style: Styles.cardSecondaryText.copyWith(
+            shadows: Styles.textShadows,
+          ),
+        ),
+        Text(
+          printDuration(bestTime), // Displays your current time as best time if bestTime is null
+          style: GoogleFonts.shareTechMono(
+            textStyle: Styles.timerText.copyWith(
+              color: Colors.white,
+              shadows: Styles.textShadows,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
