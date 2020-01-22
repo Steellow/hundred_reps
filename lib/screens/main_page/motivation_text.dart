@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ioo_reps/util/random_motivation.dart';
+import 'package:hundred_reps/util/random_motivation.dart';
 import 'package:provider/provider.dart';
 
 import '../../state/progress_state.dart';

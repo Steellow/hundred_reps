@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ioo_reps/util/date_time_helper.dart';
-import 'package:ioo_reps/util/shared_prefs.dart';
-import 'package:ioo_reps/util/styles.dart';
+import 'package:hundred_reps/util/date_time_helper.dart';
+import 'package:hundred_reps/util/shared_prefs.dart';
+import 'package:hundred_reps/util/styles.dart';
 
 class ResultsPage extends StatelessWidget {
   final DateTime startTime;

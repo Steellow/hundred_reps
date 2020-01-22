@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:ioo_reps/screens/results_page/results_page.dart';
-import 'package:ioo_reps/screens/shared_widgets/wide_floating_button.dart';
-import 'package:ioo_reps/state/progress_state.dart';
-import 'package:ioo_reps/util/fade_route.dart';
-import 'package:ioo_reps/util/shared_prefs.dart';
+import 'package:hundred_reps/screens/results_page/results_page.dart';
+import 'package:hundred_reps/screens/shared_widgets/wide_floating_button.dart';
+import 'package:hundred_reps/state/progress_state.dart';
+import 'package:hundred_reps/util/fade_route.dart';
+import 'package:hundred_reps/util/shared_prefs.dart';
 import 'package:provider/provider.dart';
 
 class DoneButton extends StatefulWidget {

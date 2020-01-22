@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ioo_reps/screens/intro_page/description_text.dart';
-import 'package:ioo_reps/screens/intro_page/picture.dart';
-import 'package:ioo_reps/screens/intro_page/start_button.dart';
-import 'package:ioo_reps/screens/intro_page/title_text.dart';
-import 'package:ioo_reps/util/styles.dart';
+import 'package:hundred_reps/screens/intro_page/description_text.dart';
+import 'package:hundred_reps/screens/intro_page/picture.dart';
+import 'package:hundred_reps/screens/intro_page/start_button.dart';
+import 'package:hundred_reps/screens/intro_page/title_text.dart';
+import 'package:hundred_reps/util/styles.dart';
 
 class IntroPage extends StatelessWidget {
   @override

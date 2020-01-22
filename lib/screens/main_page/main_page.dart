@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:ioo_reps/screens/main_page/card_swiper.dart';
-import 'package:ioo_reps/screens/main_page/done_button.dart';
-import 'package:ioo_reps/screens/main_page/motivation_text.dart';
-import 'package:ioo_reps/screens/main_page/prorgess_bar.dart';
-import 'package:ioo_reps/screens/main_page/timer.dart';
-import 'package:ioo_reps/state/progress_state.dart';
+import 'package:hundred_reps/screens/main_page/card_swiper.dart';
+import 'package:hundred_reps/screens/main_page/done_button.dart';
+import 'package:hundred_reps/screens/main_page/motivation_text.dart';
+import 'package:hundred_reps/screens/main_page/prorgess_bar.dart';
+import 'package:hundred_reps/screens/main_page/timer.dart';
+import 'package:hundred_reps/state/progress_state.dart';
 import 'package:provider/provider.dart';
 
 class MainPage extends StatelessWidget {

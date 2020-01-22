@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ioo_reps/util/styles.dart';
+import 'package:hundred_reps/util/styles.dart';
 
 import 'countdown_widget.dart';
 

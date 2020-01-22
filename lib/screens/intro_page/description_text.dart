@@ -1,6 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:ioo_reps/util/styles.dart';
+import 'package:hundred_reps/util/styles.dart';
 
 class DescriptionText extends StatelessWidget {
   @override
