@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.redAccent,
       ),
-      title: '100REPS',
+      title: '100 reps',
       home: IntroPage(),
     );
   }
