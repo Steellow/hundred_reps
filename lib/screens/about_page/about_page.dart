@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hundred_reps/screens/about_page/record_tile.dart';
 import 'package:hundred_reps/screens/shared_widgets/list_tile_icon.dart';
 import 'package:hundred_reps/screens/shared_widgets/tiles_subtitle.dart';
 import 'package:hundred_reps/util/date_time_helper.dart';
@@ -46,17 +47,7 @@ class AboutPage extends StatelessWidget {
               },
             ),
             Divider(),
-            FutureBuilder(
-              future: getBestTime(),
-              initialData: "00:00:00", // Not sure if this works, best time always loads too fast so doesn\t really matter
-              builder: (BuildContext context, AsyncSnapshot snapshot) {
-                return ListTile(
-                  leading: ListTileIcon(icon: MdiIcons.trophy),
-                  title: Text("Your Record"),
-                  subtitle: Text(printDuration(snapshot.data)), // ! THROWS ERROR IF THERE IS NO RECORD, FIX IT (if you pass null to printDuration)
-                );
-              },
-            ),
+            RecordTile(),
             ListTile(
               leading: ListTileIcon(icon: MdiIcons.googlePlay),
               title: Text("Rate on Google Play"),
