@@ -2,6 +2,7 @@ MAIN FEATURES:
     Mention image source (in about page)
     About page
     Settings screen
+    Settings delete record
     
 
 

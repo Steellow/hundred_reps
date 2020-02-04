@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hundred_reps/screens/shared_widgets/list_tile_icon.dart';
 import 'package:hundred_reps/screens/shared_widgets/tiles_subtitle.dart';
+import 'package:hundred_reps/util/date_time_helper.dart';
+import 'package:hundred_reps/util/shared_prefs.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatelessWidget {
@@ -9,11 +13,12 @@ class AboutPage extends StatelessWidget {
       body: Center(
         child: ListView(
           children: <Widget>[
-            Divider(), // ! TEMP DO SIZEDBOX HERE OR SOMETHING
+            SizedBox(height: 12),
             TilesSubtitle(
               text: "Developed & designed by",
             ),
             ListTile(
+              leading: ListTileIcon(icon: MdiIcons.web),
               title: Text("Hannes Kinnunen"),
               subtitle: Text("github.com/steellow"),
               onTap: () {
@@ -25,6 +30,7 @@ class AboutPage extends StatelessWidget {
               text: "Sources",
             ),
             ListTile(
+              leading: ListTileIcon(icon: MdiIcons.githubCircle),
               title: Text("Source Code"),
               subtitle: Text("github.com/steellow/hundred_reps"),
               onTap: () {
@@ -32,12 +38,30 @@ class AboutPage extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: ListTileIcon(icon: MdiIcons.imageArea),
               title: Text("Man Doing Push Ups Cartoon.svg"),
               subtitle: Text("from Wikimedia Commons by Videoplasty.com, CC-BY-SA 4.0"),
               onTap: () {
                 _launchURL("https://commons.wikimedia.org/wiki/File:Man_Doing_Push_Ups_Cartoon.svg");
               },
             ),
+            Divider(),
+            FutureBuilder(
+              future: getBestTime(),
+              initialData: "00:00:00", // Not sure if this works, best time always loads too fast so doesn\t really matter
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                return ListTile(
+                  leading: ListTileIcon(icon: MdiIcons.trophy),
+                  title: Text("Your Record"),
+                  subtitle: Text(printDuration(snapshot.data)), // ! THROWS ERROR IF THERE IS NO RECORD, FIX IT (if you pass null to printDuration)
+                );
+              },
+            ),
+            ListTile(
+              leading: ListTileIcon(icon: MdiIcons.googlePlay),
+              title: Text("Rate on Google Play"),
+              subtitle: Text("Google Play release coming soon"),
+            )
           ],
         ),
       ),
