@@ -43,6 +43,14 @@ abstract class Styles {
     height: 1.25,
   );
 
+  static var aboutButtonText = TextStyle(
+    letterSpacing: 7,
+    fontSize: 16,
+    color: Colors.white,
+    decoration: TextDecoration.none,
+    fontWeight: FontWeight.normal,
+  );
+
   static var titleText = GoogleFonts.oswald(
     textStyle: TextStyle(
       color: Colors.white,
