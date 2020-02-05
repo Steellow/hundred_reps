@@ -20,3 +20,9 @@ void saveBestTime(Duration duration) async {
   prefs.setInt(bestTimeKey, durationInMilliseconds);
   print("Saved preference 'besttime': " + durationInMilliseconds.toString());
 }
+
+Future<void> deleteBestTime() async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  prefs.remove(bestTimeKey);
+  print("Best time deleted from shared prefs");
+}

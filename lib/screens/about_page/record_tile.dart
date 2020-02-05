@@ -14,14 +14,23 @@ class _RecordTileState extends State<RecordTile> {
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: getBestTime(),
-      initialData: "00:00:00", // Not sure if this works, best time always loads too fast so doesn\t really matter
+      initialData: Duration(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         return ListTile(
           leading: ListTileIcon(icon: MdiIcons.trophy),
           title: Text("Your Record"),
-          subtitle: Text(printDuration(snapshot.data)), // ! THROWS ERROR IF THERE IS NO RECORD, FIX IT (if you pass null to printDuration)
+          subtitle: Text(printDuration(snapshot.data)),
+          onTap: () {
+            if(snapshot.data != null) {
+              setState(() {
+                deleteBestTime();
+              });
+            }
+          },
         );
       },
     );
   }
 }
+
+

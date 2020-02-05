@@ -1,7 +1,4 @@
 MAIN FEATURES:
-    Mention image source (in about page)
-    About page
-    Settings screen
     Settings delete record
     
 
@@ -15,6 +12,7 @@ OPTINOAL FEATURES:
 
 BUGS:
     Swiper hangs if been idling (bcz of hot reload?)
+    If you go back from main page to intro page, notif. bar stays black
 
 
 
@@ -31,3 +29,10 @@ HI-FI:
 
 CLEAN-CODE:
     screen files, organize better?
+
+    This happens in debug console verytime if you play with no record saved. Done button?
+    "I/flutter (  681): Receiver: null
+    I/flutter (  681): Tried calling: _mulFromInteger(1000)
+    I/flutter (  681): getBestTime(): returning null
+    I/flutter (  681): Total reps done: 76
+    I/flutter (  681): NoSuchMethodError: The method '_mulFromInteger' was called on null."

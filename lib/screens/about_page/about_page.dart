@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hundred_reps/screens/about_page/record_tile.dart';
 import 'package:hundred_reps/screens/shared_widgets/list_tile_icon.dart';
 import 'package:hundred_reps/screens/shared_widgets/tiles_subtitle.dart';
-import 'package:hundred_reps/util/date_time_helper.dart';
-import 'package:hundred_reps/util/shared_prefs.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -52,6 +50,7 @@ class AboutPage extends StatelessWidget {
               leading: ListTileIcon(icon: MdiIcons.googlePlay),
               title: Text("Rate on Google Play"),
               subtitle: Text("Google Play release coming soon"),
+              onTap: () {}, // Empty onTap for InkWell effect
             )
           ],
         ),
