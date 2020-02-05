@@ -20,9 +20,23 @@ class _RecordTileState extends State<RecordTile> {
           leading: ListTileIcon(icon: MdiIcons.trophy),
           title: Text("Your Record"),
           subtitle: Text(printDuration(snapshot.data)),
-          onTap: () {
-            if(snapshot.data != null) {
+          onLongPress: () {
+            if (snapshot.data != null) {
               setState(() {
+                final snackBar = SnackBar(
+                  content: Text('Record reset'),
+                  action: SnackBarAction(
+                    label: 'Undo',
+                    onPressed: () {
+                      setState(() {
+                        saveBestTime(snapshot.data); // If pressed undo, saving the earlier value for futureBuilder
+                      });
+                      print("Snackbar undo pressed");
+                    },
+                  ),
+                );
+
+                Scaffold.of(context).showSnackBar(snackBar);
                 deleteBestTime();
               });
             }
@@ -32,5 +46,3 @@ class _RecordTileState extends State<RecordTile> {
     );
   }
 }
-
-
