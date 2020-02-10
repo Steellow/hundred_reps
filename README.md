@@ -11,7 +11,7 @@ Simple app made for the 100 pushups challenge. Pushups are made in sets of 4–8
 ## Release
 
 - [Download latest apk from releases page](https://github.com/Steellow/hundred_reps/releases)
-- Play store release coming soon
+- [Google Play](https://play.google.com/store/apps/details?id=labs.ankia.hundred_reps)
 - F-droid release coming soon
 
 ### Sources
