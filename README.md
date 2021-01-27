@@ -2,6 +2,8 @@
 
 Simple app made for the 100 pushups challenge. Pushups are made in sets of 4–8–12–16–20–16–12–8–4.
 
+Project goal was to learn state management on Flutter.
+
 ## Screenshots
 
 ![Intro page](screenshots/intro_page.png)
