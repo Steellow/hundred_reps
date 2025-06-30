@@ -6,9 +6,9 @@ Project goal was to learn state management on Flutter.
 
 ## Screenshots
 
-![Intro page](screenshots/intro_page.png)
-![Main page](screenshots/main_page.png)
-![Results page](screenshots/results_page.png)
+| Intro Page | Main Page | Results Page |
+|------------|-----------|--------------|
+| ![Intro page](screenshots/intro_page.png) | ![Main page](screenshots/main_page.png) | ![Results page](screenshots/results_page.png) |
 
 ## Release
 
